@@ -1,0 +1,21 @@
+<package>
+  <description brief="tortue">
+
+     tortue
+
+  </description>
+  <author>roomba</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/tortue</url>
+  <depend package="roomba_500_series" />
+  <depend package="openni_camera" />
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="pcl_ros"/>
+  <depend package="pcl"/>
+
+</package>
+
+
