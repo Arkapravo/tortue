@@ -30,27 +30,49 @@
       <section>
         <h3>Tortue -- the robot</h3>
 
-<p>Tortue is an ongoing project aimed to develop a mobile robot with a Roomba 5XX base and a 3D motion controller, using the Robot Operating System (ROS) Platform. Latest release is version 1.0.0.</p>
+<p>Tortue is an ongoing project aimed to develop a mobile robot with a Roomba 5XX base and a 3D motion controller, using the Robot Operating System (ROS) Platform. Latest release is version 1.0.0 which uses a Roomba 560 base and ASUS Xtion Pro Live motion sensor on ROS Electric Emmy.</p>
 
 <h3>Development team</h3>
 
 <ol>
 <li>Arkapravo Bhaumik (<a href="mailto:arkapravobhaumik@gmail.com">arkapravobhaumik@gmail.com</a>)</li>
 <li>Koushik Kabiraj (<a href="mailto:koushik.atti@gmail.com">koushik.atti@gmail.com</a>) </li>
-</ol><h3>To run the robot</h3>
+</ol><h3>Release</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>version-1.0.0</p>
+
+<pre><code>Date : 30 March 2013, Saturday
+Hardware : Roomba 560, ASUS Xtion Pro Live, iRobot FTDI cable, 
+                  ACER Aspire One notebook laptop
+Software Platform : ROS Electric (ROS 1.6.9)
+About : Basic obstacle avoidance using pcl
+Running code : roslaunch tortue.launch
 </code></pre>
 
-<h3>Releases</h3>
+<h3>Dependencies</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>For this ROS package, the following must be installed, </p>
 
-<h3>Rather Drive Stick?</h3>
+<ol>
+<li><a href="https://github.com/Arkapravo/roomba_500_ROS_drivers">roomba_robot</a></li>
+<li><a href="https://github.com/Arkapravo/roomba_500_ROS_drivers">serial_communication</a></li>
+<li><a href="http://ros.org/wiki/openni_kinect?distro=electric">openni_kinect</a></li>
+<li><a href="http://www.ros.org/wiki/perception_pcl?distro=electric">perception_pcl</a></li>
+</ol><h3>To build the package</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Make sure the package is in your <a href="http://www.ros.org/wiki/ROS/EnvironmentVariables#ROS_PACKAGE_PATH">ROS_PACKAGE_PATH</a></p>
+
+<pre><code>$ rosmake tortue
+</code></pre>
+
+<h3>To run the package</h3>
+
+<p>This package should work well for any robot equipped with a Roomba 5XX base and an OpenNI device. We have used Roomba 560 and ASUS Xtion Pro Live. </p>
+
+<p>Make sure the Roomba is connected via an ftdi or bluetooth and switch on the robot, the CLEAN button will have a light on, start the following node,</p>
+
+<pre><code>$ roslaunch tortue.launch
+</code></pre>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Arkapravo">Arkapravo</a></p>
