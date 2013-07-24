@@ -54,6 +54,7 @@ else if(min_dist[0] < 0 && min_dist[2]<=0.65)
 	cmdvel.angular.z=-0.30;
 	cmdvel.linear.x=0;
 }
+//0.65 is determined by a hit & trial method, on a concrete floor for a fully charged Roomba 560 it corresponds to about 42.5 cms
 else
 {
 	printf("Go Straight\n");
